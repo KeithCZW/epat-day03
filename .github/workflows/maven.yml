@@ -31,6 +31,8 @@ jobs:
       run: mvn -B test
 
   snyk:
+    permissions:
+      contents: write
     needs: test
     runs-on: ubuntu-latest
     steps:
